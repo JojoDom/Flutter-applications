@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import  'constants.dart';
+import 'package:flutter_application_1/constants.dart';
+import  'components/body.dart';
 
 class MyHomePage extends StatelessWidget  {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -13,7 +14,7 @@ class MyHomePage extends StatelessWidget  {
     // ignore: duplicate_ignore
     return Scaffold(
       appBar: buildAppBar(),
-      //body: Body(),
+      body: Body(),
     );
   }   
       
