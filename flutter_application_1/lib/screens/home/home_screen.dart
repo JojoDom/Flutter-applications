@@ -12,7 +12,7 @@ final String title;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold (
+return Scaffold (
       appBar: AppBar(title: Text(title),
       backgroundColor : Colors.orange,
         actions: <Widget>[
@@ -36,7 +36,7 @@ final String title;
       ),
       body: Body(),
       
-      drawer: Drawer(
+ drawer: Drawer(
      child: ListView(
        padding: EdgeInsets.zero,
        children: [
@@ -46,47 +46,48 @@ final String title;
           ),
         child: Text('CATEGORIES'),
          ),
-ListTile(
+      ListTile(
        title:  Text('Women Fashion'), 
        onTap:() {
          Navigator.pop(context);
        },
-),
-ListTile(
+          ),
+       ListTile(
        title:  Text('Men Fashion'),
        onTap :() {
          Navigator.pop(context);
        },
-),
-ListTile(
+        ),
+       ListTile(
        title:  Text('Kids Fashion'),
        onTap :() {
          Navigator.pop(context);
        },
-),ListTile(
+       ),    
+       ListTile(
        title:  Text('Skin Care'),
        onTap :() {
          Navigator.pop(context);
        },
-),
-ListTile(
+        ),
+       ListTile(
        title:  Text('Hair Care'),
        onTap :() {
          Navigator.pop(context);
        },
-),
-ListTile(
+         ),
+      ListTile(
        title:  Text('Home Decor'),
        onTap :() {
          Navigator.pop(context);
        },
-),
-ListTile(
+        ),
+      ListTile(
        title:  Text('Kitchen'),
        onTap :() {
          Navigator.pop(context);
        },
-),
+        ),
 
        ]
 
