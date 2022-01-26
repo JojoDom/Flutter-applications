@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_application_1/constants.dart';
-//
+import 'package:flutter_application_1/screens/UserProfile/sign_up.dart';
 import  'package:flutter_application_1/screens/home/body.dart';
 class MyHomePage extends StatelessWidget {
   const MyHomePage ({Key? key, required this.title}) : super (key: key);
@@ -32,6 +32,19 @@ return Scaffold (
           ),
           onPressed: () {},
         ),
+        ElevatedButton(
+           
+           style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.all(16),
+                    primary: Colors.orangeAccent
+           ),
+          child: Text('LOGIN',
+          style: TextStyle(color: Colors.white, fontSize:10)
+          ),
+          onPressed: ()  {
+            Navigator.push(context, MaterialPageRoute(builder:(context)=> const SignUpPage()),);
+          },
+           )
         ]
       ),
       body: Body(),
