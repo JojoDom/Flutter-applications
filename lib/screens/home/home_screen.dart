@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/womenFashion/components/item_card.dart';
-import 'package:flutter_application_1/screens/womenFashion/components/products.dart';
-import 'package:flutter_application_1/screens/womenFashion/details/details_screen.dart';
+import 'package:flutter_application_1/screens/home/components/item_card.dart';
+import 'package:flutter_application_1/screens/home/components/products.dart';
+import 'package:flutter_application_1/screens/home/details/details_screen.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_application_1/constants.dart';
 
@@ -39,6 +39,7 @@ return Scaffold (
         ), 
              ],
              bottom: AppBar( 
+               
                automaticallyImplyLeading: false,
                title: Container(
                  height: 40,
