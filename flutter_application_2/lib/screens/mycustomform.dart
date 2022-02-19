@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/home.dart';
 
 class MyCustomForm extends StatefulWidget {
   const MyCustomForm({ Key? key }) : super(key: key);
@@ -88,7 +89,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                     // If the form is valid, display a Snackbar.  
                     ScaffoldMessenger.of(context)  
                         .showSnackBar(const SnackBar(content: Text('Logged In')));  
-                 Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder:(context)=> const Home()));
                   }
               }, child: const Text('Login')),
         ],
