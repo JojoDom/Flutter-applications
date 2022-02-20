@@ -29,7 +29,7 @@ List<Product> products = [
       title: "ladies Dress",
       price: 234,
       size: 8,
-      description: dummyText,
+      description: " ",
       image: "assets/images/dress_1.png",
       color: Colors.red
   ),
@@ -69,7 +69,7 @@ List<Product> products = [
     color: Colors.brown,
   ),
    Product(
-    id: 6,
+    id: 7,
     title: "Bag",
     price: 234,
     size: 12,
@@ -79,16 +79,16 @@ List<Product> products = [
      
   
    Product(
-    id: 6,
+    id: 8,
     title: "Men office wear",
     price: 234,
     size: 12,
-    description: dummyText,
+    description: ' ',
     image: "assets/images/dress_3.png",
     color: const Color(0xFFAEAEAE),
   ),
    Product(
-    id: 6,
+    id: 9,
     title: "Men Shoes",
     price: 234,
     size: 12,
@@ -97,7 +97,7 @@ List<Product> products = [
     color: Colors.brown
   ),
    Product(
-    id: 6,
+    id: 10,
     title: "Travel bag",
     price: 234,
     size: 12,
@@ -106,7 +106,7 @@ List<Product> products = [
     color: const Color(0xFFE6B398)
   ),
    Product(
-    id: 6,
+    id: 11,
     title: "Sweat top",
     price: 234,
     size: 12,
@@ -115,7 +115,7 @@ List<Product> products = [
     color: Colors.red,
   ),
    Product(
-    id: 6,
+    id: 12,
     title: "Ladies heels",
     price: 234,
     size: 12,
@@ -124,7 +124,7 @@ List<Product> products = [
     color: Colors.yellow
   ),
    Product(
-    id: 6,
+    id: 13,
     title: "Ladies bag",
     price: 234,
     size: 12,
@@ -133,7 +133,7 @@ List<Product> products = [
     color: const Color(0xFFFB7883)),
   
    Product(
-    id: 6,
+    id: 14,
     title: "Laptop Bag",
     price: 234,
     size: 12,
@@ -142,13 +142,13 @@ List<Product> products = [
      color: const Color(0xFFAEAEAE),
   ),
    Product(
-    id: 6,
+    id: 16,
     title: "Ladies heels",
     price: 234,
     size: 12,
     description: dummyText,
     image: "assets/images/shoe_5.png",
-    color: Colors.white,
+    color: Colors.black,
 
   ),
 ];

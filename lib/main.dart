@@ -18,7 +18,7 @@ static const appTitle = 'Ghana Mall' ;
       debugShowCheckedModeBanner: false,
       title : appTitle,
       theme: ThemeData(
-        primarySwatch:Colors.green
+        primarySwatch:Colors.orange,
       ),
       home: MyHomePage(title: appTitle),
     );

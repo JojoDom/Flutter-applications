@@ -25,7 +25,7 @@ return Scaffold (
           pinned: true,
           snap: false,
           centerTitle: false,
-          backgroundColor : Colors.green,
+          backgroundColor : Colors.orange,
           title:
          const Text('Ghana Mall'),
              actions:[
