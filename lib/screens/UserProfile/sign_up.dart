@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants.dart';
 import 'package:flutter_application_1/screens/UserProfile/sign_up_details.dart';
 //qimport 'package:flutter_application_1/screens/home/home_screen.dart
 
@@ -15,6 +16,10 @@ class SignUpPage extends StatelessWidget{
 
     
     return Scaffold(
+      appBar: AppBar(
+        elevation : 0,
+        backgroundColor: Colors.white,
+      ),
       body: Container(
         height: height,
         width : width,
@@ -22,21 +27,34 @@ class SignUpPage extends StatelessWidget{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-               Container(
-                 width:width,
-                 height: height*0.45,
-                 decoration: BoxDecoration(
-                   color:  Colors.orangeAccent,
-                   borderRadius: BorderRadius.only(
-                     bottomLeft: Radius.circular(40.0),
-                     bottomRight: Radius.circular(40.0)
-                   ),
-                   
-                   ),
-                child:Center(child: Text('GHANA MALL', style:TextStyle(fontSize: 25.0,fontWeight: FontWeight.bold,
-                color:Colors.white,) ,  
-              ))),
-              SizedBox(height:30.0),
+               Padding(
+                 padding: EdgeInsets.all(kDefaultPadding),
+                 child: Text.rich(
+                   TextSpan(
+                     text: 'Sign In\n', style:TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 15),
+                   children:[
+                     TextSpan(text: 'Sign in with your socials', style:TextStyle(color:Colors.black))
+                  ]
+                 )),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(kDefaultPadding),
+                    child: Column(
+                      mainAxisAlignment : MainAxisAlignment.center,
+                      children:<Widget>[
+                       
+                        
+
+
+                        
+
+
+                      ]
+                    )
+                  ),
+
+
+              
               
 
               SizedBox(height:30.0),

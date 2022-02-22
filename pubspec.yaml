@@ -41,6 +41,7 @@ dependencies:
  flutter_svg: ^1.0.1
  carousel_slider: ^4.0.0
  email_validator: ^2.0.1
+ flutter_signin_button : ^2.0.0
   
 
 dev_dependencies:

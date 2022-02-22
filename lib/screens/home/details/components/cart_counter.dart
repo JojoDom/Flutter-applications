@@ -1,8 +1,11 @@
+
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/constants.dart';
 
 class CartCounter extends StatefulWidget {
+ 
   const CartCounter({Key? key}) : super(key: key);
 
   @override
@@ -10,24 +13,37 @@ class CartCounter extends StatefulWidget {
 }
 
 class _CartCounterState extends State<CartCounter> {
-  int numOfItems = 1;
+  int numOfItems = 1 ;
+
+  
+  void _incrementCounter() {
+    setState(() {
+     
+      numOfItems++ ;
+    });
+  }
+   // ignore: unused_element
+   void _decrementCounter() {
+    setState(() {
+     
+      numOfItems--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
 
-        GestureDetector(
-          child:(
-        buildOutlineButton(
-          icon: Icons.remove,
-          onTap: () {
-            if (numOfItems > 1) {
-              setState(() {
-                numOfItems--;
-              });
-            }
-          },
-        )) ),
+         FloatingActionButton(
+           heroTag : null,
+        onPressed:() {if(numOfItems > 1) {
+          _decrementCounter();
+        }},
+        tooltip: 'remove',
+        child: const Icon(Icons.remove),
+      ),
+
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
           child: Text(
@@ -36,31 +52,18 @@ class _CartCounterState extends State<CartCounter> {
             style: Theme.of(context).textTheme.headline6,
           ),
         ),
-        buildOutlineButton(
-            icon: Icons.add,
-            onTap: () {
-              setState(() {
-                numOfItems++;
-              });
-            }),
+
+         FloatingActionButton(
+           heroTag: null,
+        onPressed: _incrementCounter,
+        tooltip: 'add',
+        child: const Icon(Icons.add),
+      ),
+
+       
       ],
     );
   }
 
-  SizedBox buildOutlineButton({IconData? icon, required Null Function() onTap, }) {
-    return SizedBox(
-      width: 40,
-      height: 32,
-      child: OutlinedButton(
-        style:OutlinedButton.styleFrom(
-padding: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(13),
-        ),
-        ),
-        onPressed: (){},
-        child: Icon(icon),
-      ),
-    );
-  }
+  
 }

@@ -41,7 +41,7 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       ColorAndSize(product: product),
-                      const SizedBox(height: kDefaultPadding / 2),
+                      const SizedBox(height: kDefaultPadding/2 ),
                       Description(product: product),
                      const SizedBox(height: kDefaultPadding / 2),
                       const CounterWithFavBtn(),

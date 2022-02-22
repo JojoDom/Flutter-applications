@@ -1,25 +1,81 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/home/cart.dart';
 import 'package:flutter_application_1/screens/home/components/item_card.dart';
 import 'package:flutter_application_1/screens/home/components/products.dart';
 import 'package:flutter_application_1/screens/home/details/details_screen.dart';
+import 'package:flutter_application_1/screens/home/profile.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_application_1/constants.dart';
 
 import  'package:flutter_application_1/screens/home/body.dart';
 import 'package:flutter_application_1/screens/womenFashion/women_screen.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage ({Key? key, required this.title}) : super (key: key);
 
-final String title;
+class Home extends StatefulWidget {
+  const Home({ Key? key }) : super(key: key);
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int _selectedIndex = 0;
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+    static const List<Widget> _pages = <Widget>[
+        MyHomePage(), Profile(), Cart()
+    ];
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+     body: _pages.elementAt(_selectedIndex),  
+   bottomNavigationBar: BottomNavigationBar(
+  currentIndex: _selectedIndex,
+  onTap: _onItemTapped,
+  selectedFontSize: 20,
+  selectedIconTheme: IconThemeData(size: 20),
+  items :<BottomNavigationBarItem> [
+    BottomNavigationBarItem(
+      icon:  Icon(Icons.home),
+      label: 'Home',
+     
+    ),
+
+    BottomNavigationBarItem(
+      icon:  Icon(Icons.person),
+      label: 'Profile',
+    ),
+
+    BottomNavigationBarItem(
+      icon:  SvgPicture.asset( "assets/icons/add_to_cart.svg", color: Colors.black),
+      label: 'Cart',
+    ),
+
+  ],
+  
+), 
+    );
+  }
+}
+
+
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key); 
+  @override
+  Widget build(BuildContext context) {
+    // ignore: unused_local_variable
+    
+        
 return Scaffold (
-        body: CustomScrollView(
-        slivers: [
+        body: CustomScrollView(  
+        slivers: [  
         SliverAppBar(
           floating: true,
           pinned: true,
@@ -27,19 +83,9 @@ return Scaffold (
           centerTitle: false,
           backgroundColor : Colors.orange,
           title:
-         const Text('Ghana Mall'),
-             actions:[
-              IconButton(
-          icon: SvgPicture.asset(
-            "assets/icons/cart.svg",
-            // By default our  icon color is white
-            color: kTextColor,
-          ),
-          onPressed: () {},
-        ), 
-             ],
+         const Text('Ghana Mall', style:TextStyle(color:Colors.white, fontWeight: FontWeight.bold)),
+             
              bottom: AppBar( 
-               
                automaticallyImplyLeading: false,
                title: Container(
                  height: 40,
@@ -59,7 +105,8 @@ return Scaffold (
          SliverList(
            delegate: 
            SliverChildListDelegate([
-             const Body(), 
+             const Body(),
+
            ])
            ),
            SliverGrid(
@@ -90,7 +137,8 @@ return Scaffold (
               childCount: products.length
            )
            )],
-    ),  
+    ), 
+
 drawer: Drawer(
      child: ListView(
        padding: EdgeInsets.zero,
@@ -147,9 +195,18 @@ drawer: Drawer(
        ]
 
      
-)));
+)),
+
+
+   
+);
+    
   }
+   
 }
+
+
+
 
   
      

@@ -10,17 +10,17 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-static const appTitle = 'Ghana Mall' ;
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title : appTitle,
+      title : 'Ghana Mall',
       theme: ThemeData(
         primarySwatch:Colors.orange,
       ),
-      home: MyHomePage(title: appTitle),
+      home: Home(),
     );
   }  
 }

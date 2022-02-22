@@ -19,7 +19,7 @@ class ProductTitleWithImage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           const Text(
-            "Aristocratic Hand Bag",
+            "Details",
             style: TextStyle(color: Colors.white),
           ),
           Text(
@@ -46,14 +46,13 @@ class ProductTitleWithImage extends StatelessWidget {
               ),
               const SizedBox(width: kDefaultPadding),
               Expanded(
-                child: Hero(
+                child : Hero(
                   tag: "${product.id}",
                   child: Image.asset(
                     product.image,
                     fit: BoxFit.fill,
                   ),
-                ),
-              )
+                ))
             ],
           )
         ],

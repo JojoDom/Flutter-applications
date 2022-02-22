@@ -52,7 +52,7 @@ class AddToCart extends StatelessWidget {
                 
                 onPressed: () {},
                 child: Text(
-                  "Buy  Now".toUpperCase(),
+                  "Add to Cart".toUpperCase(),
                   style: const TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
