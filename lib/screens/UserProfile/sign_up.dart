@@ -3,18 +3,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants.dart';
 import 'package:flutter_application_1/screens/UserProfile/sign_up_details.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
+
+
 //qimport 'package:flutter_application_1/screens/home/home_screen.dart
 
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({ Key? key }) : super(key: key);
 
-class SignUpPage extends StatelessWidget{
-  const SignUpPage({Key? key}) : super(key: key);
+  @override
+  _SignUpPageState createState() => _SignUpPageState();
+}
+
+
+
+class _SignUpPageState extends State<SignUpPage>{
+  
 
   @override 
   Widget build(BuildContext context){
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-
-    
+  
     return Scaffold(
       appBar: AppBar(
         elevation : 0,
@@ -31,10 +41,8 @@ class SignUpPage extends StatelessWidget{
                  padding: EdgeInsets.all(kDefaultPadding),
                  child: Text.rich(
                    TextSpan(
-                     text: 'Sign In\n', style:TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 15),
-                   children:[
-                     TextSpan(text: 'Sign in with your socials', style:TextStyle(color:Colors.black))
-                  ]
+                     text: 'Sign in with your socials', style:TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 15),
+                   
                  )),
                   ),
                   Padding(
@@ -42,35 +50,52 @@ class SignUpPage extends StatelessWidget{
                     child: Column(
                       mainAxisAlignment : MainAxisAlignment.center,
                       children:<Widget>[
-                       
-                        
+                       SignInButton(
+                         Buttons.Google,
+                         text: "Sign in with Google",
+                        onPressed: (){ }),
+                        SizedBox(height: kDefaultPadding),
 
-
-                        
-
-
+                        SignInButton(
+                          Buttons.Facebook,
+                          text: "Sign in with Facebook",
+                          onPressed : (){}
+                        )
                       ]
                     )
                   ),
 
 
-              
-              
+              SizedBox(height:20.0),
+              const Divider(),
+              Padding(
+                padding: EdgeInsets.all(kDefaultPadding),
+                child: Center(
+                  child:Text("OR",style:TextStyle(color:Colors.black, fontSize:15, fontWeight:FontWeight.bold))
+                )
+              ),
 
-              SizedBox(height:30.0),
+              Padding(
+                padding: EdgeInsets.all(kDefaultPadding),
+                child:
               TextField(
                decoration: InputDecoration(
                   hintText: 'Email',
-                  suffixIcon: Icon(Icons.email),
+                  suffixIcon: Icon(Icons.email, color: Colors.orange),
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0))
                   )
-              ),
-              SizedBox(height:20.0),
+              )),
+
+              Padding(
+                padding: EdgeInsets.all(kDefaultPadding),
+                child:
               TextField(
                 obscureText:true,
-                decoration: InputDecoration(hintText: 'Password',suffixIcon: Icon(Icons.visibility_off),
+                decoration: InputDecoration(hintText: 'Password',
+                suffixIcon: Icon(Icons.visibility_off, color:Colors.orange),
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0))),
-              ),
+              )),
+
                ElevatedButton(
                 child: Text('Login', style: TextStyle(color:Colors.white),),
                 style: ElevatedButton.styleFrom(

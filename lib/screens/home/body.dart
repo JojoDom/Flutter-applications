@@ -106,10 +106,10 @@ return Column(
                 viewportFraction: 0.8
       ),
           ),
-          Padding(
-           padding:  EdgeInsets.all(40.0),
-           child : Text('All Products')
-        ), 
+  Padding(
+    padding:  EdgeInsets.all(40.0),
+     child : Text('All Products', style:TextStyle(fontSize : 20, fontWeight: FontWeight.bold, color: Colors.black))
+    ), 
   ]
 ); 
 
